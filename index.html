@@ -13,19 +13,19 @@
 </head>
 <body style="font-family: Helvetica; background-image: url('imagenes/Galaxias_estrellado.jpg'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed; color: white;">
     <header>
-        <h1><b>Un viaje a las estrellas</b></h1> <!-- el texto luego debe estar super-puesto a la imagen en la parte superior del sol de color del sol-->
+        <h1><b>Un viaje a las estrellas</b></h1> <!-- el texto luego debe estar super-puesto a una imagen del planeta que no adjunte por que se veía mal (la adjuntare en otros trabajos donde pueda usar css)-->
         <a href="https://ciencia.nasa.gov/sol/" target="_blank">
         </a>
         <br>
-        <a href="https://es.wikipedia.org/wiki/El_principito" target="_blank"><blockquote cite="https://es.wikipedia.org/wiki/El_principito"> <i>Me pregunto si las estrellas se iluminan con el fin de que algún día, cada uno pueda encontrar la suya.</i> (El Principito)</blockquote>
+        <a href="https://es.wikipedia.org/wiki/El_principito" target="_blank"><blockquote cite="https://es.wikipedia.org/wiki/El_principito"> <i>Me pregunto si las estrellas se iluminan con el fin de que algún día, cada uno pueda encontrar la suya.</i> (El Principito)</blockquote> <!-- frase del principito que me ha gustado bastante en relación con el tema, y la opción de ver el libro en wikipedia (para los que no sepan cual es el libro)-->
         </a>
     </header>
     <aside>
-    <nav>
+    <nav> <!-- navegador para poder dirigir a diferentes lugares de la página -->
         <ul>
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#galaxias">Galaxias</a></li>
-            <li><a href="#estrellas">Estrellas</a></li> <!-- TENGO QUE ACOMODAR ESTO UN POCO MAS -->
+            <li><a href="#estrellas">Estrellas</a></li>
             <li><a href="#planetas">Planetas</a></li>
             <li><a href="#informacion">Información</a></li>
             <li><a href="#formulario">Formulario</a></li>
@@ -39,36 +39,70 @@
             
             <p>Una simple mirada al cielo nocturno nos puede demostrar lo pequeños y grandes que podemos ser, mas también lo especial que es el que existamos en este lugar en este momento, de tantos planetas que pueden existir.</p>
             <p>En este sitio web, exploraremos el vasto universo que nos rodea, desde las estrellas más cercanas hasta las galaxias más lejanas.</p>
-
+            <br> 
         </div>
 
         <div id="galaxias">
             <h2>Las Galaxias</h2>
             <p>Se estima que hay 1 billón de galaxias en el universo observable. De las cuales la mas cercana a la nuestra se encuentra a 2,5 millones de años luz de distancia.</p>
             <p>Una Galaxia es un conjunto de estrellas, nubes de gas, planetas, polvo cósmico, materia oscura y energía unidas gravitatoriamente en una estructura más o menos definida. Pueden ser elípticas, espirales, lenticulares e irregulares. Las galaxias irregulares son, normalmente, el resultado de perturbaciones provocadas por la atracción gravitacional de galaxias vecinas.</p>
-                <img src="imagenes/galaxia.jpg" alt="Imagen de galaxia en espiral" title="Una galaxia" style="max-width: 100%; height: auto;">
+            <img src="imagenes/galaxia.jpg" alt="Imagen de galaxia en espiral" title="Una galaxia" style="max-width: 100%; height: auto;">
+            <br> 
         </div>
 
         <div id="estrellas">
             <h2>Estrellas</h2>
             <p>Son un cuerpo celeste que brilla con luz propia debido a las reacciones termonucleares que ocurren en su núcleo. Estas reacciones convierten el hidrógeno en helio, liberando una enorme cantidad de energía en forma de luz y calor. Las estrellas pueden variar en tamaño y temperatura, siendo algunas tan frías que pueden tener temperaturas superficiales de aproximadamente 2000 ºC, mientras que otras pueden alcanzar hasta 50 000 ºC.</p>
             <p>Nuestro sistema solar cuenta con solo una estrella, el sol</p>
-             <img src="imagenes/imagen_sol.jpg" alt="Nuestro sol" title="La estrella mas cercana que tenemos, el sol" style="max-width: 100%; height: auto;"> 
+             <img src="imagenes/imagen_sol.jpg" alt="Nuestro sol" title="La estrella mas cercana que tenemos, el sol" style="max-width: 100%; height: auto;">
+            <br> 
         </div>
 
-        <div id="planetas"> <!-- FALTA COMPLETAR PLANETAS PARA TERMINAR-->
+        <div id="planetas">
             <h2>Planetas</h2>
             <p>Un planeta es un objeto astronómico que orbita una estrella y que es lo suficientemente masivo como para ser redondeado por su propia gravedad, pero no lo suficientemente masivo como para causar fusión termonuclear, y que ha despejado su región vecina de planetesimales. Nuestro sistema solar alberga ocho planetas según la clasificación de la NASA.</p>
             <img src="imagenes/planetas.jpg" alt="Planetas del sistema solar" title="Los planetas de nuestro sistema solar" style="max-width: 100%; height: auto;">
+            <br>
         </div>
 
         <div id="formulario">
-            <h1>Formulario</h1>
+            <h3>Formulario para los interesados en la newsletter de ciencia espacial</h3>
+
+            <form action="" method="post">
+                <fieldset>
+                    <legend>Formulario de contacto</legend>
+
+                    <label>Nombre:</label> <!-- etiqueta para el nombre-->
+                        <input type="text" name="nombre" placeholder="Ej: Daniel"> <br>
+
+                    <label>Correo electrónico:</label> <!--correo electrónico-->
+                        <input type="email" name="email" placeholder="Ej: email@viaje.com"required> <br> <!-- required es para que sea obligatorio -->
+
+                    <label>Teléfono:</label>
+                        <input type="tel" name="telefono"pattern="[0-9]{9}" placeholder="Ej: 000000000" required> <br>
+
+                    <label>¿De que tema te encuentras mas interesado/a? </label> <br> <!-- se pueden seleccionar varios-->
+                        <input type="checkbox" id="actualizaciones" name="intereses">Actualizaciones mas importantes<br> 
+                        <input type="checkbox" id="james_w" name="intereses">Informaciones del James Webb<br>
+                        <input type="checkbox" id="datos_c" name="intereses">Datos curiosos<br>
+                        <input type="checkbox" id="descrubrimientos_materia_osc" name="intereses">Nuevos descubrimientos materia oscura<br>
+
+                    <label>¿Cómo te gustaría recibir la información?</label> <br> <!--solo se puede seleccionar uno-->
+                        <input type="radio" name="contacto" id="email" value="email"> Correo electrónico <br> 
+                        <input type="radio" name="contacto" id="whatsapp" value="whatsapp"> WhatsApp <br>
+                        <input type="radio" name="contacto" id="telegram" value="telegram"> Telegram <br> <br>
+
+                    <textarea rows="10" cols="65">Dinos si podemos mejorar en algún aspecto o algún comentario que quieras hacer</textarea> <br>
+                    
+                    <button type="submit">Enviar información</button> <br> <br> <!--botón para enviar los datos -->
+                    <button type="reset">Limpiar datos del formulario</button> <!--botón para limpiar el formulario-->
+                </fieldset>
+            </form>
         </div>
 
     </main>
 
-    <div id="informacion">
+    <div id="informacion"> <!--para poder mandar a esta sección con el navegador (igual que los demás elementos id anteriores)-->
     <footer>
         <p>Creado por Daniel Rodriguez</p>
         <p>2025</p>
